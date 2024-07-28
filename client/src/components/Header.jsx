@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 
-
 function Header({globalSearchValue, handleGlobalSearchValueChange}) {
   return (
     <header className="app-header">
