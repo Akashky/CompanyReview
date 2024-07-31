@@ -12,20 +12,20 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 
 app.use(cors({
-  origin: 'http://127.0.0.1:5173',
+  origin: 'https://companyreview-fe.onrender.com',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
 }));
 app.use(bodyParser.json());
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'http://127.0.0.1:5173');
+  res.header('Access-Control-Allow-Origin', 'https://companyreview-fe.onrender.com');
   res.header('Access-Control-Allow-Methods', 'GET,HEAD,OPTIONS,POST,PUT');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
   next();
 });
 
 app.options('*', (req, res) => {
-    res.header('Access-Control-Allow-Origin', 'http://127.0.0.1:5173');
+    res.header('Access-Control-Allow-Origin', 'https://companyreview-fe.onrender.com');
     res.header('Access-Control-Allow-Methods', 'GET,HEAD,OPTIONS,POST,PUT');
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
     res.sendStatus(200);
