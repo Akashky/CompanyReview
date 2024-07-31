@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3001/api';
+const API_URL = 'https://companyreview-be.onrender.com';
 
 export const fetchCompanies = async () => {
   try {
